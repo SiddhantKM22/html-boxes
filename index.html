@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            body{
+                width: 90%;
+                height: 90%;
+            }
+            .giftbox{
+                width: 200px;
+                height: 200px;
+                background-image: url(./images/open\ and\ close.jpg);
+                background-size: 400px 250px;
+                display: block;
+               
+            }
+            .closed{
+                background-position: -200px 10px                                    ;
+                background-size: 400px 250px;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="giftbox closed" onclick="openBox(event)"></div>
+       <script>
+           var opened=false
+           function openBox(event){
+               var giftbox=event.target
+               if (giftbox.classList.contains('closed')){
+                giftbox.classList.remove('closed') 
+               }else{
+                giftbox.classList.add('closed')
+               }
+               
+           }
+       </script> 
+    </body>
+</html>
